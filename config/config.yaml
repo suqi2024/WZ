@@ -1,0 +1,8 @@
+# 环境配置：支持多环境（test/prod等），可根据需要切换
+env:
+  test:
+    base_url: "https://t.rcwzsh.com:9999"  # 测试环境基础URL
+    timeout: 10                             # 接口超时时间（秒）
+  # prod:
+  #   base_url: "https://api.rcwzsh.com"    # 生产环境基础URL
+  #   timeout: 15

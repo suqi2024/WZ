@@ -1,0 +1,14 @@
+cat > .gitignore << EOF
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env/
+.venv/
+*.log
+
+# Editor
+.idea/
+.vscode/
+*.swp
+EOF

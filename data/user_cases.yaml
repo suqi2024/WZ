@@ -1,0 +1,36 @@
+# 用例1：创建订单（提取订单号）
+- case_id: create_user_001
+  title: 创建订单并提取订单号
+  api:
+    method: post
+    path: "/api/customer/person/app/pay/cars"  # 查询车辆信息
+    json:
+      latitude: "39.023603"  # 引用登录提取的user_id
+      longitude: "117.708571"
+  extract:  # 提取规则：变量名: JSONPath路径
+    licenseNumber: "$.data[0].licenseNumber"  # 从响应提licenseNumber
+  expected:
+    code: 200
+    json:
+      msg: "操作成功"  # 断言响应 msg 为 "操作成功"
+      code: "0000"    # 断言响应 code 为 "0000"（接口业务码）
+      # 可继续添加其他需要断言的字段，如：
+    # "data[0].licenseNumber": "津EM2456"  # 断言第一个车辆的车牌号
+# 用例2：创建订单（提取订单号）
+- case_id: create_user_002
+  title: 创建订单并提取订单号
+  api:
+    method: post
+    path: "/api/customer/person/app/pay/cars"  # 查询车辆信息
+    json:
+      latitude: "39.023603"  # 引用登录提取的user_id
+      longitude: "117.708571"
+  extract:  # 提取规则：变量名: JSONPath路径
+    licenseNumber: "$.data[0].licenseNumber"  # 从响应提licenseNumber
+  expected:
+    code: 200
+    json:
+      msg: "操作成功"  # 断言响应 msg 为 "操作成功"
+      code: "0000"    # 断言响应 code 为 "0000"（接口业务码）
+      # 可继续添加其他需要断言的字段，如：
+    # "data[0].licenseNumber": "津EM2456"  # 断言第一个车辆的车牌号
