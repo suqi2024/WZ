@@ -7,8 +7,12 @@ __pycache__/
 .venv/
 *.log
 
+# 测试报告
+report/
+
 # Editor
 .idea/
 .vscode/
 *.swp
+*.iml
 EOF
